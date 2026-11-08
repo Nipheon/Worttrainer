@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { DEFAULT_KNOWN, describeSelection, restoreState } from '../src/state.js';
+import { WORDS } from '../src/words.js';
 
 const empty = restoreState(null);
 assert.equal(empty.saved, false);
@@ -19,6 +20,6 @@ assert.deepEqual([...dirty.known].sort(), ['a', 'ei'], 'only known units survive
 
 assert.equal(restoreState(JSON.stringify({ known: [] })).known.size, 0, 'saved empty selection is kept');
 
-assert.equal(describeSelection(new Set(['m', 'a'])), 'Bekannt: a, m · 2 von 100 Wörtern');
+assert.equal(describeSelection(new Set(['m', 'a'])), `Bekannt: a, m · 2 von ${WORDS.length} Wörtern`);
 
 console.log('state tests passed');

@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import { WORDS, nextWord, playableWords, units } from '../src/words.js';
 import { DEFAULT_KNOWN } from '../src/state.js';
 
-assert.equal(WORDS.length, 100, 'exactly 100 words');
-assert.equal(new Set(WORDS.map((w) => w.toLowerCase())).size, 100, 'no duplicates');
+assert.ok(WORDS.length >= 100, 'at least 100 words');
+assert.equal(new Set(WORDS.map((w) => w.toLowerCase())).size, WORDS.length, 'no duplicates');
 for (const word of WORDS) {
   assert.ok(units(word), `${word} splits into known units`);
   assert.ok(word.length <= 6, `${word} is short`);

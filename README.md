@@ -1,7 +1,7 @@
 # Worttrainer
 
-Blitzlesen für Grundschulkinder im Browser: der erste Lesewortschatz mit den 100 häufigsten
-kurzen Wörtern (`der`, `die`, `das`, `Mama`, `alle` …). Lehrkraft oder Eltern wählen die
+Blitzlesen für Grundschulkinder im Browser: der erste Lesewortschatz mit gut 190
+häufigen kurzen Wörtern (`der`, `die`, `das`, `Mama`, `alle` …). Lehrkraft oder Eltern wählen die
 bekannten Buchstaben, die Walze zeigt dazu passende Wörter. Gleiches Aussehen und gleicher Ablauf
 wie der [Silbentrainer](https://github.com/Nipheon/Silbentrainer).
 
@@ -26,14 +26,17 @@ zurück zur Auswahl. Ohne gespeicherte Auswahl erscheint zuerst die Auswahlseite
 
 - Ein Wort erscheint nur, wenn alle seine Laute bekannt sind. Laute sind einzelne Buchstaben und
   `ei au eu äu ie ch sch st sp` (`die` = d + ie, `Schule` = sch + u + l + e).
-- Die Seite zeigt unter der Auswahl, wie viele der 100 Wörter damit passen.
+- Die Seite zeigt unter der Auswahl, wie viele der Wörter damit passen.
 - Ein Wort kommt erst wieder, wenn alle passenden Wörter einmal gezeigt wurden.
 - Die Walze dreht sich kurz und bleibt dann auf dem Wort stehen (mit „reduzierte Bewegung“ ohne Drehen).
 
 ## Wortliste
 
-`src/words.js` enthält 100 von Hand ausgewählte Wörter für den ersten Lesewortschatz, in fünf Gruppen:
-Artikel und Fürwörter, Tunwörter, kleine Wörter, Namenwörter, Wiewörter. Alle haben höchstens sechs
+`src/words.js` enthält 190 Wörter für den ersten Lesewortschatz:
+100 von Hand ausgewählte in fünf Gruppen (Artikel und Fürwörter, Tunwörter, kleine Wörter, Namenwörter,
+Wiewörter) und 90 weitere aus der Liste der 100 häufigsten Wörter im
+[Grundwortschatz Baden-Württemberg](https://km.baden-wuerttemberg.de/fileadmin/redaktion/m-km/intern/PDF/Publikationen/Grundschule/2020_Grundwortschatz_für_den_Rechtschreibunterricht_an_den_Grundschulen_in_Baden-Württemberg_-_Klassen_1_-_4.pdf)
+(2020), soweit sie schreibbar sind. Alle haben höchstens sechs
 Buchstaben und lassen sich mit den Lauten oben schreiben (`ß`, `x`, `y`, `c`, `qu`, `ck` kommen nicht vor).
 Der Test `tests/words.test.mjs` prüft Anzahl, Doppelte und Zerlegung in Laute.
 

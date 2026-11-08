@@ -20,6 +20,14 @@ export const WORDS = [
   'Mond', 'Maus',
   // Wiewörter
   'gut', 'klein', 'rot', 'neu', 'alt', 'lieb', 'toll', 'schön', 'lang',
+  // Weitere häufige Wörter (Liste der 100 häufigsten Wörter, Grundwortschatz Baden-Württemberg)
+  'ab', 'allein', 'als', 'also', 'bald', 'beide', 'beim', 'bis', 'bist', 'dem', 'den', 'denn', 'dich', 'dies', 'doch',
+  'darf', 'durch', 'einige', 'einmal', 'etwas', 'euch', 'euer', 'eure', 'für', 'ganz', 'gegen', 'haben', 'hast',
+  'hatte', 'ihm', 'ihn', 'ins', 'jede', 'kein', 'können', 'kannst', 'konnte', 'man', 'manch', 'mehr', 'mögen',
+  'magst', 'mochte', 'müssen', 'muss', 'musst', 'nach', 'neben', 'nichts', 'nie', 'nun', 'ob', 'oft', 'ohne', 'sein',
+  'seid', 'seit', 'sich', 'sogar', 'solch', 'sollen', 'soll', 'über', 'uns', 'unter', 'vom', 'vor', 'wann', 'waren',
+  'warum', 'weg', 'wegen', 'weil', 'welche', 'wem', 'wen', 'wenig', 'wenn', 'werden', 'werde', 'wirst', 'wird',
+  'wurde', 'wohl', 'wollen', 'willst', 'wollte', 'zum', 'zur', 'zwar',
 ];
 
 const UNITS = [...VOWELS, ...VOWEL_COMBOS, ...CONSONANTS, ...CONSONANT_COMBOS].sort((a, b) => b.length - a.length);

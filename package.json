@@ -1,0 +1,9 @@
+{
+  "name": "worttrainer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/words.test.mjs && node tests/state.test.mjs"
+  },
+  "license": "MIT"
+}

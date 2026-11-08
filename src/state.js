@@ -1,6 +1,6 @@
 import { CONSONANTS, CONSONANT_COMBOS, VOWELS, VOWEL_COMBOS, WORDS, playableWords } from './words.js';
 
-export const DEFAULT_KNOWN = ['a', 'e', 'i', 'o', 'u', 'd', 'l', 'm', 'n', 'r', 's', 't'];
+export const DEFAULT_KNOWN = ['a', 'e', 'i', 'o', 'u', 'd', 'l', 'm', 'n', 'r', 's', 't', 'ie', 'ei', 'au'];
 
 const ALL_UNITS = new Set([...VOWELS, ...VOWEL_COMBOS, ...CONSONANTS, ...CONSONANT_COMBOS]);
 

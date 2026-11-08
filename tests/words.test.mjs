@@ -20,6 +20,9 @@ assert.deepEqual(playableWords(new Set(['m', 'a'])), ['am', 'Mama']);
 assert.deepEqual(playableWords(new Set()), []);
 assert.ok(playableWords(new Set(DEFAULT_KNOWN)).length >= 8, 'defaults give a playable pool');
 assert.ok(playableWords(new Set(DEFAULT_KNOWN)).includes('Oma'));
+for (const word of ['die', 'ein', 'nein', 'aus']) {
+  assert.ok(playableWords(new Set(DEFAULT_KNOWN)).includes(word), `${word} is playable with the defaults`);
+}
 
 const pool = ['a', 'b', 'c'];
 const seen = new Set();

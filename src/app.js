@@ -198,6 +198,7 @@ function stopClock() {
 }
 
 function resetSession() {
+  cancelSpin();
   stopClock();
   phase = minutes ? 'ready' : 'off';
   rounds = 0;
@@ -232,7 +233,10 @@ function tick() {
 function timeOver() {
   stopClock();
   phase = 'over';
-  if (!spinning) showOver();
+  if (!spinning) {
+    showOver();
+    announce('Die Zeit ist um.');
+  }
 }
 
 function showOver() {
@@ -254,6 +258,7 @@ function showResult() {
 
 function onStart() {
   if (spinning) return;
+  if (phase === 'running') tick();
   if (phase === 'over') {
     showResult();
     return;
@@ -280,7 +285,7 @@ function spin(animate = true) {
     span.classList.remove('spinning');
     span.textContent = word;
     fitReels();
-    announce(word);
+    announce(phase === 'over' ? `${word}. Die Zeit ist um.` : word);
     prompt.textContent = 'Lies das Wort. Bereit für das nächste?';
     if (phase === 'over') showOver();
   };

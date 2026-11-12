@@ -22,6 +22,8 @@ Dann `http://localhost:8000` öffnen. Tests: `npm test` (Node 20 oder neuer).
 Beim nächsten Aufruf startet die Seite direkt mit der Walze; „Buchstaben ändern“ führt
 zurück zur Auswahl. Ohne gespeicherte Auswahl erscheint zuerst die Auswahlseite.
 
+Lesezeit: aus, 2, 3, 5, 7 oder 10 Minuten (Standard 5). Die Zeit läuft ab dem ersten START; danach bleibt das letzte Wort stehen, und „Fertig“ zeigt, wie viele Wörter gelesen wurden.
+
 ## Regeln
 
 - Ein Wort erscheint nur, wenn alle seine Laute bekannt sind. Laute sind einzelne Buchstaben und

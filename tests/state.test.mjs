@@ -22,4 +22,14 @@ assert.equal(restoreState(JSON.stringify({ known: [] })).known.size, 0, 'saved e
 
 assert.equal(describeSelection(new Set(['m', 'a'])), `Bekannt: a, m · 2 von ${WORDS.length} Wörtern`);
 
+assert.equal(empty.minutes, 5, 'timer defaults to 5 minutes');
+for (const minutes of [0, 2, 3, 5, 7, 10]) {
+  assert.equal(restoreState(JSON.stringify({ known: ['a'], minutes })).minutes, minutes);
+}
+assert.equal(restoreState(JSON.stringify({ known: ['a'], minutes: 4 })).minutes, 5, 'unknown minutes fall back');
+assert.equal(restoreState(JSON.stringify({ known: ['a'], minutes: '3' })).minutes, 5, 'non-number minutes fall back');
+assert.equal(restoreState(JSON.stringify({ known: ['a'] })).minutes, 5, 'old saved config gets the default timer');
+assert.equal(restoreState(JSON.stringify({ minutes: 7 })).minutes, 7, 'minutes are kept even without a known list');
+assert.equal(restoreState(JSON.stringify({ minutes: 7 })).saved, false, 'minutes alone is not a saved configuration');
+
 console.log('state tests passed');

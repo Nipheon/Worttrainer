@@ -19,8 +19,10 @@ Dann `http://localhost:8000` öffnen. Tests: `npm test` (Node 20 oder neuer).
 ## Gespeicherte Einstellung
 
 „Los geht's“ speichert die Auswahl im Browser (`localStorage`, nur lokal, keine Übertragung).
-Beim nächsten Aufruf startet die Seite direkt mit der Walze; „Buchstaben ändern“ führt
+Beim nächsten Aufruf öffnet die Seite direkt die Walze (mit Lesezeit erscheint das erste Wort erst nach START); „Buchstaben ändern“ führt
 zurück zur Auswahl. Ohne gespeicherte Auswahl erscheint zuerst die Auswahlseite.
+
+Lesezeit: aus, 2, 3, 5, 7 oder 10 Minuten (Standard 5). Die Zeit läuft ab dem ersten START; danach bleibt das letzte Wort stehen, und „Fertig“ zeigt, wie viele Wörter gelesen wurden.
 
 ## Regeln
 

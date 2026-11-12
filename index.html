@@ -24,6 +24,10 @@
       <h2>Weitere Laute</h2>
       <div class="tiles" data-group="consonantCombos"></div>
 
+      <h2>Lesezeit in Minuten</h2>
+      <div class="segments" id="minutes" role="radiogroup" aria-label="Lesezeit in Minuten" aria-describedby="minutes-hint"></div>
+      <p class="hint" id="minutes-hint">Die Zeit läuft ab dem ersten START. „aus“ = ohne Zeitlimit.</p>
+
       <p id="count" class="hint" aria-live="polite"></p>
 
       <button id="go" class="primary" type="button">Los geht's</button>
@@ -31,10 +35,19 @@
     </section>
 
     <section id="play" class="card" hidden>
+      <div id="timer-bar" class="timer-bar" hidden>
+        <span id="clock" class="clock" role="timer" aria-label="Restzeit"></span>
+        <span id="read-count" class="read-count"></span>
+      </div>
       <div id="reels" class="reels" aria-hidden="true"></div>
       <p id="result" class="sr-only" aria-live="polite"></p>
       <button id="start" class="primary" type="button">START</button>
       <p id="prompt" class="prompt">Drücke START und lies das Wort.</p>
+      <div id="done" class="done" hidden>
+        <h2 id="done-title" tabindex="-1">Geschafft!</h2>
+        <p id="done-count" class="done-count"></p>
+        <button id="again" class="primary" type="button">Nochmal</button>
+      </div>
       <p id="summary" class="summary"></p>
       <button id="back" class="link" type="button">Buchstaben ändern</button>
     </section>
